@@ -33,5 +33,12 @@ export default {
     });
 
     return Promise.all(promises);
+  },
+  fetchFavorites(token) {
+    return axios.get(`${ROOT_URL}/3/account/me/favorites`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
   }
 }

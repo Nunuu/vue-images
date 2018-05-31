@@ -7,6 +7,7 @@
       <div v-if="isLoggedIn" class="horizontal">
         <router-link to="/" class="item">Galleries</router-link>
         <router-link to="/upload" class="item">Upload</router-link>
+        <router-link to="/favorites" class="item">Favorites</router-link>
         <a class="item" @click="logout">Logout</a>
       </div>
       <a v-else href="#" class="ui item" @click="login">Login</a>

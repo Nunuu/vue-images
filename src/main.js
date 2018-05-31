@@ -5,6 +5,7 @@ import store from './store';
 import AuthHandler from './components/AuthHandler';
 import ImageList from './components/ImageList';
 import UploadForm from './components/UploadForm';
+import Favorites from './components/Favorites';
 
 Vue.use(VueRouter);
 
@@ -13,6 +14,7 @@ export const router = new VueRouter({
   routes: [
     { path: '/', component: ImageList },
     { path: '/upload', component: UploadForm },
+    { path: '/favorites', component: Favorites },
     { path: '/oauth2/callback', component: AuthHandler }
   ]
 })

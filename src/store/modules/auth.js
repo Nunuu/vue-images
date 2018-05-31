@@ -3,7 +3,8 @@ import qs from 'qs';
 import { router } from '../../main';
 
 const state = {
-  token: window.localStorage.getItem('imgur_token')
+  token: window.localStorage.getItem('imgur_token'),
+  username: window.localStorage.getItem('imgur_username')
 };
 
 const getters = {
