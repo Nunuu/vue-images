@@ -24,12 +24,20 @@ const actions = {
     await api.uploadImages(images, token);
     // Redirect user to ImageList component
     router.push('/');
+  },
+  async fetchFavorites({rootState, commit}) {
+    const {token} = rootState.auth;
+    const response = await api.fetchFavorites(token);
+    commit('setFavorites', response.data.data);
   }
 };
 
 const mutations = {
   setImages: (state, images) => {
     state.images = images;
+  },
+  setFavorites: (state, images) => {
+    state.favorites = images;
   }
 };
 

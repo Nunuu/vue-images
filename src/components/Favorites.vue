@@ -13,6 +13,10 @@ import { mapActions, mapGetters } from 'vuex';
 export default {
   name: 'Favorites',
   computed: mapGetters(['allFavorites', 'isLoggedIn']),
+  methods: mapActions(['fetchFavorites']),
+  created() {
+    this.fetchFavorites();
+  }
 }
 </script>
 
